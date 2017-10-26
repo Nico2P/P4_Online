@@ -1,0 +1,313 @@
+
+#bloc_page {
+    background-color: white;
+    width: 90%;
+}
+
+#bloc_ajout {
+    padding-top: 130px;
+}
+
+#vue_article {
+    padding-top: 130px;
+}
+
+#vue_modif {
+    padding-top: 130px;
+}
+
+#blog_admin {
+    background-color: lightgrey;
+    padding-top: 100px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.jumbotron {
+    height: 100%;
+    width:80%;
+    background-image: url("https://www.nps.gov/common/uploads/stories/images/nri/20150226/articles/C65717AB-C6CC-A1AD-916896FB9C4651FC/C65717AB-C6CC-A1AD-916896FB9C4651FC.jpg");
+    background-size: cover;
+    padding-top: 150px !important;
+    -webkit-padding-before:150px !important;
+    margin-left: 10%;
+    color: white;
+}
+
+
+#navigation nav {
+    position: fixed;
+    z-index: 1;
+    width: 90%;
+    margin-left: -30px;
+}
+
+
+nav {
+    margin-bottom: 60px;
+    border-bottom: 1px solid black;
+    background-color: white;
+}
+
+nav ul {
+    margin-top: 15px;
+}
+
+.fa-lock {
+    padding-left: 5px;
+}
+
+a {
+    color: #0085A1;
+}
+
+#accueil a {
+    color: white !important;
+}
+
+.index img {
+    display: none;
+}
+
+
+article {
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.commentaire {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#txtCommentaire {
+    width: 50%;
+}
+
+.txt_zone_admin {
+    min-height: 600px;
+    border: 1px solid black;
+    padding: 15px;
+    overflow:auto;
+}
+
+#bloc_edit {
+    margin-left: 8%;
+}
+
+.ajouter {
+    width: 100%;
+    background-color: #0085A1;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+#btn_ajout {
+    text-align: center;
+}
+
+#titreArt {
+    margin-bottom: 15px;
+    width: 300px;
+    text-align: center;
+}
+
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid black;
+}
+
+th {
+    text-align: center !important;
+}
+
+.table td, .table th {
+    border-top: 1px solid #030404 !important;
+    vertical-align: middle !important;
+}
+
+.lgn-tab {
+    height: 100px;
+}
+
+.lgn-tab img {
+    display: none;
+}
+
+.id_art {
+    width: 60px;
+}
+
+.titre_art {
+    width: 90px;
+}
+
+.ctn-art {
+    width: 500px;
+}
+
+.contenu_art {
+    width: 100px;
+}
+
+.auteur_com {
+    width: 100px;
+}
+
+.contenu_com {
+    width: 550px;
+}
+
+.action_com {
+    width: 90px;
+}
+
+#ajout {
+    margin-top: 30px;
+}
+
+#inputName {
+    width: 25%;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    min-width: 160px;
+}
+
+#inputPassword {
+    width: 25%;
+    margin-bottom: 30px;
+    min-width: 160px;
+}
+
+#connexion {
+    width: 25%;
+    min-width: 160px;
+}
+
+#label-connexion {
+    display: block;
+    margin-left: 37%
+}
+
+.securearea-title {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.admin {
+    padding-top: 100px;
+    background-color: lightgrey;
+    height: 600px;
+}
+
+#infoblog {
+    text-align: center;
+}
+
+#login_destroy {
+    text-align: right;
+}
+
+.btn-info {
+    background-color: #0085A1 !important;
+    border-color: #0085A1 !important;
+}
+
+#auteur {
+    margin: 10px 0px 10px 0px;
+}
+
+.btn-tab .btn {
+    width: 90px !important;
+    font-size: small !important;
+    padding-left: 5px !important;
+    margin-top: 10px;
+}
+
+.btn i {
+    padding-right: 5px;
+}
+
+.btn-tab{
+    width: 200px !important;
+    padding-left: 30px !important;
+}
+
+
+
+.footer {
+    border-top: 0px solid #ccc;
+    padding-top: 10px;
+    text-align: center;
+}
+
+#erreur {
+    margin-top: 150px;
+}
+
+
+@media (max-width: 778px) {
+
+
+    #bloc_page {
+        width: 100%;
+    }
+
+    #navigation nav {
+        width: 100%;
+    }
+
+
+    .jumbotron {
+        width: 100%;
+        margin: 0;
+        height: 100%;
+        font-size: smaller;
+    }
+
+    .jumbotron h1 {
+        margin-left: -15px;
+    }
+
+    .jumbotron p {
+        margin-left: -15px;
+    }
+
+    #contenu {
+        margin: 0%;
+    }
+
+    #label-connexion {
+        width: 100%;
+        margin-left: 10%;
+    }
+
+    article img {
+        width: 100%;
+        height: 80%;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .btn-tab .btn {
+        width: 90px !important;
+        font-size: x-small;
+        margin-left: -30px;
+    }
+
+    #blog_admin {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+}
