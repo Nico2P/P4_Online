@@ -9,6 +9,7 @@
 <?php
 
 define('HOST', $host );
+define('ASSETS', $host.'/P4/public/');
 
 
 ?>
@@ -24,8 +25,8 @@ define('HOST', $host );
     <meta name="author" content="Jean Forteroche">
 
     <base href="<?= $racineWeb ?>" >
-    <link rel="stylesheet" href="<?= $host . "/P4/public/stylesheet"?>">
-    <link rel="stylesheet" href="<?= $host . "/P4/public/font-awesome.min.css"?>">
+    <link rel="stylesheet" href="<?= ASSETS . "stylesheet"?>">
+    <link rel="stylesheet" href="<?= ASSETS . "font-awesome.min.css"?>">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
 
