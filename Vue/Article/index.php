@@ -40,7 +40,7 @@ $this->titre = $this->nettoyer($article['titre']); ?>
 
 <hr />
 
-<form method="post" action="article/commenter">
+<form method="post" action="article/comment">
     <input id="auteur" name="auteur" type="text" placeholder="Votre pseudo" required/><br/>
     <textarea id="txtCommentaire" name="contenu" rows="4" placeholder="Votre commentaire (120 characters maximum)"  maxlength="120" required></textarea><br/>
     <input type="hidden" name="id" value="<?=$article['id'] ?>" />

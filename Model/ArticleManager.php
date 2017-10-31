@@ -31,27 +31,18 @@ class ArticleManager extends Model
     }
 
     // Ajout un articles dans la bdd
-    public function ajouterArticle($titre,$contenu) {
+    public function addArticle($titre,$contenu) {
         $sql = 'INSERT INTO articles(titre_art, contenu_art, date_art) VALUES(?,?,?)';
         $date = date(DATE_RSS); // date courante
         $this->executerRequete($sql, array($titre,$contenu,$date));
 
     }
 
-    public function supprimerArticle($id_art) {
+    public function deleteArticle($id_art) {
         $sql = 'DELETE FROM articles WHERE id_art = '. $id_art;
         $this->executerRequete($sql, array($id_art));
         $sql_com = 'DELETE FROM commentaires WHERE id_article = '. $id_art;
         $this->executerRequete($sql_com, array($id_art));
-    }
-
-    public function modifierArticle($id_art) {
-        $sql = 'SELECT FORM article WHERE id_art = ' .$id_art;
-        $this->executerRequete($sql, array($id_art));
-        if ($article->rowCount() == 1)
-            return $article->fetch();
-        else
-            throw new Exception("Aucun article ne correspond à l'indentifiant '$id_art'");
     }
 
     public function updateArticle($titre_art, $contenu_art, $id_art) {

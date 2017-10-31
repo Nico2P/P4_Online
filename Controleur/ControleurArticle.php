@@ -30,11 +30,11 @@ class ControleurArticle  extends Controleur {
     }
 
     //Ajoute un commentaire à l'article
-    public function commenter() {
+    public function comment() {
         $id_art = $this->requete->getParametre("id");
         $auteur = $this->requete->getParametre("auteur");
         $contenu = $this->requete->getParametre("contenu");
-        $this->commentaireManager->ajouterCommentaire($auteur, $contenu, $id_art);
+        $this->commentaireManager->addCommentaire($auteur, $contenu, $id_art);
         //Exécute l'action par défaut pour actualisé la liste des articles
         $this->executerAction("index");
     }

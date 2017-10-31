@@ -12,7 +12,7 @@ $this->titre = "Administration du blog" ?>
 
     <h2 class="securearea-title"> Ajout d'un article</h2>
     <div id="bloc_edit" class="col-md-10">
-        <form method="post" action="admin/ajouter" class="securearea-title">
+        <form method="post" action="admin/addArticle" class="securearea-title">
             <div id="editeur">
                 <input id="titreArt"  name="titre" type="text" placeholder="Titre de l'article" required/><br/>
                 <textarea id="txtArticle" class="txt_zone_admin" name="contenu" placeholder=""></textarea>

@@ -19,7 +19,7 @@ class CommentaireManager extends Model {
     }
 
     // Ajout un commentaire dans la bdd
-    public function ajouterCommentaire($auteur, $contenu, $id_art) {
+    public function addCommentaire($auteur, $contenu, $id_art) {
         $sql = 'INSERT INTO commentaires(date_com, auteur_com, contenu_com, id_article) VALUES(?, ?, ?, ?)';
         $date = date(DATE_W3C); // date courante
         $this->executerRequete($sql, array($date,$auteur,$contenu,$id_art));
@@ -44,7 +44,7 @@ class CommentaireManager extends Model {
         return $commentaire_reporte;
     }
 
-    public function supprimer_commentaire($id) {
+    public function deleteCommentaire($id) {
         $sql = 'DELETE FROM commentaires WHERE id_com = '. $id;
         $this->executerRequete($sql, array($id));
     }

@@ -32,14 +32,14 @@ class ControleurAdmin extends ControleurSecurise
 
     // CREATE READ UPDATE DELETE
 
-    public function ajouter() {
+    public function addArticle() {
         $titre = $this->requete->getParametre("titre");
         $contenu = $this->requete->getParametre("contenu");
-        $this->articleManager->ajouterArticle($titre, $contenu);
+        $this->articleManager->addArticle($titre, $contenu);
         $this->rediriger("admin");
     }
 
-    public function modifier() {
+    public function modify() {
         $id_art = $this->requete->getParametre("id");
         $article = $this->articleManager->getArticle($id_art);
         $this->genererVue(array('article' => $article));
@@ -54,19 +54,19 @@ class ControleurAdmin extends ControleurSecurise
         $this->rediriger("admin");
     }
 
-    public function supprimer() {
+    public function delete() {
         $id = $this->requete->getParametre("id");
-        $this->articleManager->supprimerArticle($id);
-        $this->commentaireManager->supprimer_commentaire($id);
+        $this->articleManager->deleteArticle($id);
+        $this->commentaireManager->deletecommentaire($id);
         $this->rediriger("admin");
 
     }
 
     // DELETE AND VALID COMMENTARY
 
-    public function suppCommentaire() {
+    public function deleteCommentaire() {
         $id = $this->requete->getParametre("id");
-        $this->commentaireManager->supprimer_commentaire($id);
+        $this->commentaireManager->deleteCommentaire($id);
         $this->rediriger("admin");
     }
 
@@ -93,7 +93,7 @@ class ControleurAdmin extends ControleurSecurise
         $this->genererVue();
     }
 
-    public function ajout() {
+    public function addPost() {
         $this->genererVue();
     }
 
