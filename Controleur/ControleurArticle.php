@@ -34,7 +34,7 @@ class ControleurArticle  extends Controleur {
         $id_art = $this->requete->getParametre("id");
         $auteur = $this->requete->getParametre("auteur");
         $contenu = $this->requete->getParametre("contenu");
-        $this->commentaireManager->addCommentaire($auteur, $contenu, $id_art);
+        $this->commentaireManager->addCommentaire(htmlspecialchars($auteur), htmlspecialchars($contenu), $id_art);
         //Exécute l'action par défaut pour actualisé la liste des articles
         $this->executerAction("index");
     }

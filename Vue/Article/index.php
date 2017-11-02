@@ -26,8 +26,8 @@ $this->titre = $this->nettoyer($article['titre']); ?>
 </header>
 <?php foreach ($commentaires as $commentaire) : ?>
     <div class="commentaire">
-    <p><?= $this->nettoyer($commentaire['auteur']) ?> a dit :</p>
-    <p><?= $this->nettoyer($commentaire['contenu']) ?></p>
+    <p><?= $this->nettoyer(htmlspecialchars($commentaire['auteur'])) ?> a dit :</p>
+    <p><?= $this->nettoyer(htmlspecialchars($commentaire['contenu'])) ?></p>
 
 <form method="post" action="article/reported">
     <input name="id_com" type="hidden"  value="<?=$commentaire['id'] ?>" />
