@@ -5,6 +5,7 @@ $this->titre = "Administration du blog" ?>
     <h2 class="securearea-title">Administration</h2>
     <div id="login_destroy">
         <p><a id="deconnexion" href="connexion/deconnecter" class="btn btn-info btn-lg">Se déconnecter</a></p>
+        <a href="<?php echo $_SERVER["HTTP_REFERER"]; ?>">Retour à la page précédente</a>
     </div>
 
     <h2 class="securearea-title">Modifier un Article</h2>

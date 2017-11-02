@@ -19,6 +19,8 @@
 
     </div>
 
+    <p><a class="securearea-title" href="<?php echo $_SERVER["HTTP_REFERER"]; ?>">Retour à la page précédente</a></p>
+
 
 <div id="erreur">
 <?php if (isset($msgErreur)): ?>

@@ -19,6 +19,8 @@ $this->titre = $this->nettoyer($article['titre']); ?>
 </article>
 </div>
 
+<a href="<?php echo $_SERVER["HTTP_REFERER"]; ?>">Retour à la page précédente</a>
+
 <hr/>
 
 <header>

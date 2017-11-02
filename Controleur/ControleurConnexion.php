@@ -38,7 +38,8 @@ class ControleurConnexion extends Controleur {
                 $this->rediriger("admin");
                 }
             } else {
-                $this->executerAction("index");
+
+                throw new Exception("Action impossible : login ou mot de passe inconnu");
             }
         } else {
             throw new Exception("Action impossible : login ou mot de passe non defini");

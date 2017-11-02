@@ -7,6 +7,7 @@ $this->titre = "Administration du blog" ?>
     <div id="login_destroy">
         <p>Bienvenue, <?= $this->nettoyer($login) ?> !</p>
         <p><a id="deconnexion" href="connexion/deconnecter" class="btn btn-info btn-lg">Se déconnecter</a></p>
+        <a href="<?php echo $_SERVER["HTTP_REFERER"]; ?>">Retour à la page précédente</a>
     </div>
 
     <div id="infoblog">
@@ -22,7 +23,7 @@ $this->titre = "Administration du blog" ?>
     </a>
     </div>
 
-    <h2 class="securearea-title">Moderation des commentaires :</h2>
+    <h2 class="securearea-title">Modération des commentaires signalés :</h2>
     <br/>
     <div class="table-responsive">
         <table class="table table-striped" id="tabcommentaires">

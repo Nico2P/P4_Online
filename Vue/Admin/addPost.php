@@ -6,6 +6,7 @@ $this->titre = "Administration du blog" ?>
 
     <div id="login_destroy">
         <p><a id="deconnexion" href="connexion/deconnecter" class="btn btn-info btn-lg">Se déconnecter</a></p>
+        <a href="<?php echo $_SERVER["HTTP_REFERER"]; ?>">Retour à la page précédente</a>
     </div>
 
 

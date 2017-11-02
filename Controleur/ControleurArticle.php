@@ -31,12 +31,19 @@ class ControleurArticle  extends Controleur {
 
     //Ajoute un commentaire à l'article
     public function comment() {
+
         $id_art = $this->requete->getParametre("id");
         $auteur = $this->requete->getParametre("auteur");
         $contenu = $this->requete->getParametre("contenu");
-        $this->commentaireManager->addCommentaire(htmlspecialchars($auteur), htmlspecialchars($contenu), $id_art);
-        //Exécute l'action par défaut pour actualisé la liste des articles
-        $this->executerAction("index");
+        if (preg_match("#^\S+\w{1,120}\S{1,}#", $auteur )) {
+            $this->commentaireManager->addCommentaire(htmlspecialchars($auteur), htmlspecialchars($contenu), $id_art);
+            $this->executerAction("index");
+        } else {
+            //Exécute l'action par défaut pour actualisé la liste des articles
+            throw new Exception("Action impossible : auteur ou contenu non defini");
+        }
+
+
     }
 
     // Signale un commentaire
